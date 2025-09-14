@@ -1,0 +1,91 @@
+.quote-app {
+  display: flex;
+  justify-content: center;   
+  align-items: center;      
+  width: 100vw;              
+  height: 100vh;             
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  font-family: "Montserrat", sans-serif;
+  position: relative;       
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Glassmorphism Card === */
+.quote-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+/* === Morphism Box for Text === */
+.quote-box {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.1),
+              inset -6px -6px 12px rgba(255, 255, 255, 0.6);
+  animation: fadeInUp 0.6s ease;
+}
+
+/* === Quote Text === */
+.quote-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* === Author === */
+.quote-author {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4f46e5;
+}
+
+/* === Fixed Button (Bottom Center) === */
+.quote-button {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.quote-button:hover {
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.5);
+}
+
+.quote-button:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+/* === Animation === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;   
+  font-family: "Poppins", sans-serif;
+}
+
+.counter-container {
+  position: fixed;        
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3a8a, #9333ea, #f43f5e);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Counter card */
+.counter-box {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 20px;
+  padding: 40px;
+  width: 340px;
+  text-align: center;
+  backdrop-filter: blur(10px);  /* glass effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Title */
+.counter-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Counter number inside a glowing circle */
+.counter-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #06b6d4, #3b82f6);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.counter-value:hover {
+  transform: scale(1.1);
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Base button style */
+.btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+/* Gradient buttons */
+.btn-red {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+}
+.btn-red:hover {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.btn-gray {
+  background: linear-gradient(135deg, #9ca3af, #6b7280);
+}
+.btn-gray:hover {
+  background: linear-gradient(135deg, #4b5563, #374151);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.btn-green {
+  background: linear-gradient(135deg, #34d399, #059669);
+}
+.btn-green:hover {
+  background: linear-gradient(135deg, #047857, #065f46);
+  transform: translateY(-3px) scale(1.05);
+}
